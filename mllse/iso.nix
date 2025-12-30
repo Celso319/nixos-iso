@@ -3,7 +3,7 @@
 nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
   modules = [
-    nixpkgs.nixosModules.installer-cd-minimal
+    "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
     ./configuration.nix
   ];
 }
