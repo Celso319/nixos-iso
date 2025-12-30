@@ -8,7 +8,5 @@
   #   config.boot.kernelPackages.yt6801
   # ];
 
-  networking.useDHCP = true;
-
   system.stateVersion = "25.11";
 }
