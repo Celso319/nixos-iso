@@ -6,11 +6,16 @@
   };
 
   outputs = { self, nixpkgs }:
-let
+  let
     system = "x86_64-linux";
   in {
     nixosConfigurations.mllse =
-      import ./mllse/iso.nix { inherit nixpkgs; };
+      nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./mllse/iso.nix
+        ];
+      };
 
     # Build target
     packages.${system}.mllse =
