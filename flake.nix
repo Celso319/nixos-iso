@@ -1,5 +1,5 @@
 {
-  description = "NixOS ISO for MLLSE Mini PC";
+  description = "Celso NixOS ISO builds";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
