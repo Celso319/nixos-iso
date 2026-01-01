@@ -1,12 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, modulesPath, ... }:
 
 {
   imports = [
     # Base installer
     "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
 
-    # Hardware module
-    ../../modules/hardware/yt6801.nix
   ];
 
   # Kernel pin (must match yt6801 availability)
