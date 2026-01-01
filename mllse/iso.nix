@@ -3,7 +3,7 @@
 {
   imports = [
     # Base installer
-    "${pkgs.path}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
+    "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
 
     # Hardware module
     ../../modules/hardware/yt6801.nix
