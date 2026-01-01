@@ -1,9 +1,14 @@
-{ nixpkgs }:
+{ config, pkgs, ... }:
 
-nixpkgs.lib.nixosSystem {
-  system = "x86_64-linux";
-  modules = [
-    "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
-    ./configuration.nix
+{
+  imports = [
+    # Base installer
+    <nixpkgs/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix>
+
+    # Hardware module
+    ../../modules/hardware/yt6801.nix
   ];
+
+  # Kernel pin (must match yt6801 availability)
+  boot.kernelPackages = pkgs.linuxPackages_6_6;
 }
