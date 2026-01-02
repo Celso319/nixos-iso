@@ -4,7 +4,8 @@
   imports = [
     # Base installer
     "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
-    ./configuration.nix
+    ./users.nix
+    ./yt6801.nix
 
   ];
 

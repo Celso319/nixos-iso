@@ -16,3 +16,4 @@
   # Firmware
   hardware.enableRedistributableFirmware = true;
 }
+
