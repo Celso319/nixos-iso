@@ -2,7 +2,7 @@
   description = "Celso NixOS ISO builds";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/tree/nixos-25.11";
   };
 
   outputs = { self, nixpkgs }:
